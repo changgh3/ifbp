@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+       http://www.springframework.org/schema/beans/spring-beans.xsd  
+       http://code.alibabatech.com/schema/dubbo  
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- dubbo 配置 -->
+    <dubbo:application name="${dubbo.application.name}"/>
+    <dubbo:registry address="${dubbo.registry.address}"/>
+    <dubbo:protocol name="${dubbo.protocol.name}" port="${dubbo.protocol.port}"/>
+
+      <!--<dubbo:monitor protocol="registry"></dubbo:monitor>-->
+
+	<!-- 生产者声明 -->
+   <!--  <bean id="infosetRpcServcieProvider" class="com.yonyou.ifbp.sm.infoset.rpc.impl.InfosetRpcServiceImpl"/>
+    <dubbo:service interface="com.yonyou.ifbp.sm.infoset.rpc.InfosetRpcService" ref="infosetRpcServcieProvider" retries="0" timeout="35000" filter="logcontext"/>
+    
+    <bean id="pubScenceRpcServcieProvider" class="com.yonyou.ifbp.sm.infoset.rpc.impl.PubSceneRpcServiceImpl"/>
+    <dubbo:service interface="com.yonyou.ifbp.sm.infoset.rpc.PubSceneRpcService" ref="pubScenceRpcServcieProvider" retries="0" timeout="35000" filter="logcontext"/> -->
+	
+	<dubbo:reference id="wbRpcRoleService" interface="com.yonyou.ifbp.rpc.service.WBRpcRoleService" check="false" filter="logcontext"/>
+</beans>

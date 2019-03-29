@@ -1,0 +1,30 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.yonyou.ifbp</groupId>
+	<artifactId>ifbp-demo</artifactId>
+	<version>3.0.1-final</version>
+	<packaging>pom</packaging>
+	<modules>
+		<module>ifbp-demo-public</module>
+		<module>ifbp-demo-private</module>
+		<module>ifbp-demo-web</module>
+	</modules>
+
+	<properties>
+		<!-- 主要依赖库的版本定义 -->
+		<ifbp.modules.version>3.0.1-final</ifbp.modules.version>
+		<springside.version>4.3.0-RELEASE</springside.version>
+		<spring.version>4.0.5.RELEASE</spring.version>
+		<hibernate-validator.version>5.0.3.Final</hibernate-validator.version>
+		<mysql.version>5.1.38</mysql.version>
+		<postgresql.version>9.4-1205-jdbc4</postgresql.version>
+		<javax.servlet-api.version>3.1.0</javax.servlet-api.version>
+		<junit.version>4.11</junit.version>
+		<!-- Plugin的属性 -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.7</java.version>
+		<jetty.version>8.1.16.v20140903</jetty.version>
+	</properties>
+
+</project>
